@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Javascript Button</title>
+    <link rel="stylesheet" type="text/css" href="css/button.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <button id="doge" type="button">Doggo</button>
+      <img src="img/doge.png" id="dogeMeme" alt="Doge meme" />
+    </div>
+
+    <script>
+      let dogeBtn = document.getElementById("doge");
+      let dogeImg = document.getElementById("dogeMeme");
+      dogeBtn.innerHTML = "Woof!";
+      dogeBtn.addEventListener("mouseover", function() {
+        dogeBtn.innerHTML = "Woof woof!";
+      });
+      dogeBtn.addEventListener("mouseout", function() {
+        dogeBtn.innerHTML = "Woof!";
+      });
+      dogeBtn.addEventListener("click", function() {
+        toggleImage();
+      });
+
+      function toggleImage() {
+        dogeImg.style.visibility =
+          dogeImg.style.visibility == "visible" ? "hidden" : "visible";
+      }
+    </script>
+  </body>
+</html>
